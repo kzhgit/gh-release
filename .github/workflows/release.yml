@@ -1,20 +1,27 @@
-# .github/release.yml
+# # .github/release.yml
 
-changelog:
-  exclude:
-    labels:
-      - ignore-for-release
-    authors:
-      - octocat
-  categories:
-    - title: Breaking Changes 🛠
-      labels:
-        - Semver-Major
-        - breaking-change
-    - title: Exciting New Features 🎉
-      labels:
-        - Semver-Minor
-        - enhancement
-    - title: Other Changes
-      labels:
-        - "*"
+# name: Release
+
+# on:
+#   workflow_dispatch:
+#   inputs:
+#     releaseType:
+#       description: stable, canary, or release candidate?
+#       required: true
+#       type: choice
+#       options:
+#         - canary
+#         - stable
+#         - release-candidate
+
+# jobs:
+#   release:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v3
+        
+#       - name: Create Release
+#         uses: softprops/action-gh-release@v1
+#         with:
+#           generate_release_notes: true
